@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>姫遊び｜関西の王棋</title>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="王棋（おうぎ）は8x8の盤上で行われる将棋の変種です。このゲームでは「姫」という独特の駒と昇進ルールが特徴です。">
+    <meta name="keywords" content="王棋, 将棋, 姫, 戦略ゲーム, ボードゲーム, 駒妖, 日本のゲーム">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Cyril Veltin">
+
+    <!-- License metadata -->
+    <meta name="dcterms.rights" content="CC BY-SA 4.0">
+    <meta name="dcterms.rightsHolder" content="Cyril Veltin">
+    <meta name="dcterms.source" content="https://ja.ogi.page/">
+    <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">
+
+    <meta property="og:site_name" content="駒妖">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="姫遊び｜関西の王棋">
+    <meta property="og:description" content="王棋（おうぎ）は8x8の盤上で行われる将棋の変種です。このゲームでは「姫」という独特の駒と昇進ルールが特徴です。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ja.komayo.page/gemu/">
+    <meta property="og:image" content="https://ja.komayo.page/gemu/img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_1024.webp">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:image:alt" content="満月の夜、寺院の五重塔を背景に将棋を指す二人の男性。青い着物を纏った女性の幽霊が、月明かりに照らされながら静かに彼らを見つめている水墨画風のイラスト。">
+    <meta property="og:article:author" content="Cyril Veltin">
+    <meta property="og:article:published_time" content="2023-01-01">
+    <meta property="og:article:modified_time" content="2025-12-26">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="姫遊び｜関西の王棋">
+    <meta name="twitter:description" content="王棋（おうぎ）は8x8の盤上で行われる将棋の変種です。このゲームでは「姫」という独特の駒と昇進ルールが特徴です。">
+    <meta name="twitter:image" content="https://ja.komayo.page/gemu/img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_1024.webp">
+
+    <link rel="alternate" hreflang="x-default" href="https://en.komayo.page/game/">
+    <link rel="alternate" hreflang="en" href="https://en.komayo.page/game/">
+    <link rel="alternate" hreflang="fr" href="https://fr.komayo.page/jeu/">
+    <link rel="alternate" hreflang="ja" href="https://ja.komayo.page/gemu/">
+    <link rel="alternate" hreflang="th" href="https://th.komayo.page/len/">
+    <link rel="alternate" hreflang="zh" href="https://zh.komayo.page/youxi/">
+
+    <link rel="canonical" href="https://ja.komayo.page/gemu/">
+
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="駒妖">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link href="/all.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Game",
+          "@id": "https://ja.komayo.page/gemu/",
+          "url": "https://ja.komayo.page/gemu/",
+          "inLanguage": "ja",
+          "name": "ゲーム",
+          "headline": "姫遊び",
+          "alternateName": ["王棋", "おうぎ", "姫遊び", "Hime Asobi"],
+          "description": "王棋（おうぎ）は8x8の盤上で行われる将棋の変種です。このゲームでは「姫」という独特の駒と昇進ルールが特徴です。",
+          "abstract": "将棋の8x8盤バリエーション。新しい駒「姫」の導入と従来のルールの一部変更が特徴。",
+          "image": "https://ja.komayo.page/gemu/img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_1024.webp",
+          "thumbnailUrl": "https://ja.komayo.page/gemu/img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_200.webp",
+          "datePublished": "2023-01-01",
+          "dateModified": "2025-12-26",
+          "author": {
+            "@type": "Person",
+            "@id": "https://cyrilvelt.in/#identity",
+            "name": "Cyril Veltin",
+            "url": "https://cyrilvelt.in/"
+          },
+          "publisher": { "@id": "https://cyrilvelt.in/#identity" },
+          "copyrightHolder": { "@id": "https://cyrilvelt.in/#identity" },
+          "copyrightYear": "2023",
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "isPartOf": {
+            "@type": "ShortStory",
+            "@id": "https://ja.komayo.page/",
+            "url": "https://ja.komayo.page/",
+            "name": "怪談",
+            "headline": "駒妖の誘い"
+          },
+          "isBasedOn": {
+            "@type": "Game",
+            "name": "将棋",
+            "url": "https://ja.wikipedia.org/wiki/将棋"
+          },
+          "sameAs": [
+            "https://www.chessvariants.com/rules/ogi",
+            "https://ja.ogi.page/"
+          ],
+          "genre": ["戦略ゲーム", "将棋変種", "ボードゲーム"],
+          "keywords": ["王棋", "将棋", "姫", "戦略ゲーム", "ボードゲーム", "駒妖", "日本のゲーム"],
+          "numberOfPlayers": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 2
+          },
+          "gameLocation": ["盤上", "オンライン"],
+          "characterAttribute": ["王", "姫", "飛車", "角", "銀将", "桂馬", "香車", "歩兵"],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": "戦略ゲーム愛好家"
+          },
+          "typicalAgeRange": "10+",
+          "isFamilyFriendly": true,
+          "isAccessibleForFree": true
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "怪談",
+              "item": "https://ja.komayo.page/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ゲーム",
+              "item": "https://ja.komayo.page/gemu/"
+            }
+          ]
+        }
+      ]
+    </script>
+  </head>
+
+  <body itemscope itemtype="https://schema.org/WebPage">
+    <header>
+      <a href="https://komayo.page/"><img src="/favicon/favicon.svg" alt="駒妖" width="512" height="512"></a>
+
+      <nav aria-label="breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemscope itemtype="https://schema.org/ShortStory" itemprop="item" itemid="https://ja.komayo.page/" href="/"><span itemprop="name">怪談</span></a>
+            <meta itemprop="position" content="1">
+          </li>
+
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemscope itemtype="https://schema.org/Game" itemprop="item" itemid="https://ja.komayo.page/gemu/" href="/gemu/"><span itemprop="name">ゲーム</span></a>
+            <meta itemprop="position" content="2">
+          </li>
+        </ol>
+      </nav>
+    </header>
+
+    <main>
+      <article itemprop="mainEntity" itemscope itemtype="https://schema.org/Game">
+        <h1 itemprop="headline">姫遊び</h1>
+
+        <p>
+          <span itemprop="name">王棋</span>（おうぎ、ローマ字：Ōgi）は、より短くダイナミックな対局を目指した将棋の変種です。
+          王棋という名前は文字通り<q>王のゲーム</q>を意味しますが、<span itemprop="alternateName">姫遊び</span>（ひめあそび）としても知られています。
+          この別名は、<a href="https://fr.komayo.page/recits/la-genese-de-l-enchanteresse/"
+            hreflang="fr"
+            title="Les origines mystérieuses de Komayō révélées"
+            rel="external"
+            itemprop="hasPart"
+            itemscope
+            itemtype="https://schema.org/Book"><cite itemprop="headline" lang="fr">La Genèse de l'Enchanteresse</cite></a>の主人公に由来しています。
+          この二つの呼び名は、ゲームにおいて姫が王と並んで戦略の中心的役割を担っているという特徴を反映しています。
+        </p>
+
+        <h2>初期配置</h2>
+
+        <picture>
+          <img
+            itemprop="image"
+            width="1024"
+            height="1024"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            srcset="
+              img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_200.webp 200w,
+              img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_440.webp 440w,
+              img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_604.webp 604w,
+              img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_862.webp 862w,
+              img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_1024.webp 1024w"
+            src="img/traditional-ogi-shogi-variant-starting-position-japanese-chess-diagram,w_1024.webp"
+            alt="8×8の将棋盤上の王棋の初期配置。右側と上部に漢数字で1から8まで番号が振られた白黒の図表に、伝統的な配置で駒が並べられ、漢字で表記されています。"
+          >
+        </picture>
+
+        <h2>従来の将棋との違い</h2>
+
+        <p itemprop="description">
+          王棋は、持ち駒の打ち込みと成りのシステムなど、伝統的な将棋の基本原理を受け継いでいますが、以下の点で異なります。
+        </p>
+
+        <dl>
+          <dt>盤面のサイズ</dt>
+          <dd>従来の9×9の将棋盤ではなく、8×8の64マスで行われます。</dd>
+
+          <dt>駒の構成</dt>
+          <dd>
+            <ul>
+              <li>金将は除外されています。</li>
+              <li>新しい駒<q>姫</q>が導入されています。姫は角行の動きに加え、西洋チェスのナイトのように全方向に桂馬跳びができます。</li>
+            </ul>
+          </dd>
+
+          <dt>歩兵の打ち込み</dt>
+          <dd>不成の歩兵は一切打つことができません。ただし、玉将がと金を取った場合、<q>王の特権</q>を行使すれば、そのと金を成った状態のまま打つことができます。</dd>
+
+          <dt>王の特権</dt>
+          <dd>玉将が成り駒を取った場合、対局者は通常通り不成に戻すか、成った状態のまま持ち駒にするかを選択できます。</dd>
+        </dl>
+
+        <picture>
+          <img
+            itemprop="image"
+            width="1024"
+            height="1024"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            srcset="
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_200.webp 200w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_307.webp 307w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_394.webp 394w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_469.webp 469w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_538.webp 538w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_605.webp 605w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_681.webp 681w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_698.webp 698w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_739.webp 739w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_801.webp 801w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_860.webp 860w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_925.webp 925w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_974.webp 974w,
+              img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_1024.webp 1024w"
+            src="img/japanese-ghost-shogi-players-moonlight-temple-illustration,w_1024.webp"
+            alt="満月の夜、寺院の五重塔を背景に将棋を指す二人の男性。青い着物を纏った女性の幽霊が、月明かりに照らされながら静かに彼らを見つめている水墨画風のイラスト。"
+          >
+        </picture>
+      </article>
+    </main>
+
+    <footer>
+      <p>
+        完全なルールは<a href="https://ja.ogi.page/" rel="external" title="王のゲーム">王棋の公式ページ</a>でご覧いただけます。
+      </p>
+    </footer>
+  </body>
+</html>
