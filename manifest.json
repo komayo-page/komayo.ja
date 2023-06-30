@@ -1,7 +1,7 @@
 {
-  "name": "Komayō page",
-  "short_name": "Komayō",
-  "description": "In the mystical light of the full moon, discover the story of Komayō, a bewitching yōkai from Japanese folklore. Seductive and deadly, she lures lost souls into the game of ōgi, absorbing their life energy and dooming them to eternal torment. It&#39;s a tale of fatal attraction and unchecked desire, a poignant warning against the dangers of temptation.",
+  "name": "駒妖ページ",
+  "short_name": "駒妖",
+  "description": "満月の神秘的な光の中で、日本の民間伝承に登場する魅惑的な妖怪、駒妖の物語を学びましょう。 魅惑的かつ危険な彼女は、失われた魂を王棋に誘い込み、彼らの生命エネルギーを吸収し、永遠の苦しみに運命づける。 これは致命的な魅力と抑えられない欲望の物語であり、誘惑の危険に対する痛烈な警告です。",
   "lang": "ja",
   "start_url": "/",
   "display": "standalone",
